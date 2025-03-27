@@ -1,0 +1,10 @@
+# Ignore virtual environments
+venv/
+venv_openssl/
+
+# Python cache files
+__pycache__/
+*.pyc
+
+# Mac system files
+.DS_Store
