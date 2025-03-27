@@ -1,10 +1,10 @@
-memory_loss: a decline in the ability to recall or retain information
-microglial_activation: an immune response in brain tissue involving microglia
-disruption(pnn): breakdown of perineuronal nets surrounding neurons
-low(neurosteroid_levels): reduced presence of steroid hormones in the brain
-aromatase_suppression: inhibition of the enzyme responsible for converting androgens to estrogens
-aging: progressive physiological decline associated with time
-impaired_learning: reduced ability to acquire or retain new knowledge
-forgetfulness: a common symptom of cognitive impairment
-neuroinflammation: inflammation of the nervous system, often involving activated microglia
-chronic_stress: persistent stress that disrupts normal brain function and hormonal balance
+memory_loss: decline in the brain's ability to recall or retrieve information, commonly seen in neurodegeneration
+impaired_learning: reduced ability to acquire new knowledge, often due to structural or functional neural changes
+disruption(pnn): breakdown of perineuronal nets, which protect neurons and support plasticity
+microglial_activation: a reactive immune state of microglia, the brain's primary immune cells
+neuroinflammation: inflammation of the brain and spinal cord, often involving activated microglia
+chronic_stress: prolonged psychological stress that dysregulates hormones and impairs cognition
+aromatase_suppression: inhibition of the enzyme that converts androgens into estrogens in the brain
+low(neurosteroid_levels): reduced concentration of hormones like estradiol that regulate brain function
+aging: biological process associated with decline in neural plasticity and hormone production
+academic_decline: measurable reduction in learning performance, attention, or memory retention

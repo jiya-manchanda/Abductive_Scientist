@@ -1,5 +1,12 @@
+aging => low(neurosteroid_levels)
+chronic_stress => aromatase_suppression
+aromatase_suppression => low(neurosteroid_levels)
 low(neurosteroid_levels) => microglial_activation
+neuroinflammation => microglial_activation
 microglial_activation => disruption(pnn)
 disruption(pnn) => memory_loss
-exposure(x) => disrupts(pnn)
-causes(disruption(pnn), memory_loss)
+disruption(pnn) => impaired_learning
+memory_loss => forgetfulness
+impaired_learning => academic_decline
+academic_decline => stress
+stress => chronic_stress

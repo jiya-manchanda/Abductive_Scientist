@@ -1,21 +1,30 @@
+import networkx as nx
+from sentence_transformers import util
+import matplotlib.pyplot as plt
+
 class SymbolicReasoner:
     def __init__(self, rules_path):
         self.rules = self.load_rules(rules_path)
+        self.graph = self.build_graph()
 
     def load_rules(self, path):
         rules = []
         with open(path, 'r') as f:
             for line in f:
-                line = line.strip()
                 if '=>' in line:
-                    parts = line.split('=>')
+                    parts = line.strip().split('=>')
                     premise = parts[0].strip()
                     conclusion = parts[1].strip()
                     rules.append((premise, conclusion))
         return rules
 
+    def build_graph(self):
+        G = nx.DiGraph()
+        for premise, conclusion in self.rules:
+            G.add_edge(premise, conclusion)
+        return G
+
     def explain(self, target, depth=3):
-        """Backward chaining: find causes of a concept"""
         paths = []
         self._trace_explanation(target, [], paths, depth)
         return paths
@@ -29,17 +38,93 @@ class SymbolicReasoner:
                 all_paths.append(new_path)
                 self._trace_explanation(premise, new_path, all_paths, depth - 1)
 
-    def predict(self, start, depth=3):
-        """Forward chaining: find effects of a concept"""
-        paths = []
-        self._trace_prediction(start, [], paths, depth)
-        return paths
+    def connect_concepts(self, concepts):
+        chains = []
+        for i in range(len(concepts)):
+            for j in range(len(concepts)):
+                if i != j:
+                    try:
+                        path = nx.shortest_path(self.graph, source=concepts[i], target=concepts[j])
+                        edge_chain = [(path[k], path[k+1]) for k in range(len(path)-1)]
+                        chains.append(edge_chain)
+                    except (nx.NetworkXNoPath, nx.NodeNotFound):
+                        continue
+        return chains
 
-    def _trace_prediction(self, current, current_path, all_paths, depth):
-        if depth == 0:
-            return
-        for premise, conclusion in self.rules:
-            if premise == current:
-                new_path = current_path + [(premise, conclusion)]
-                all_paths.append(new_path)
-                self._trace_prediction(conclusion, new_path, all_paths, depth - 1)
+    def score_chain(self, chain, known_facts, user_input, embedder):
+        """
+        Score a reasoning chain using:
+        - length
+        - overlap with known facts
+        - embedding similarity to the original user input
+        """
+        from reasoning_engine import explain_chain_naturally  # prevent circular import
+        explanation_text = explain_chain_naturally(chain)
+
+        # Embedding similarity
+        input_embed = embedder.model.encode(user_input, convert_to_tensor=True)
+        chain_embed = embedder.model.encode(explanation_text, convert_to_tensor=True)
+        sim_score = float(util.cos_sim(input_embed, chain_embed)[0])
+
+        # Fact match score
+        fact_match = sum(1 for p, c in chain for f in known_facts if p in f or c in f)
+
+        # Final weighted score (you can tune weights)
+        return 0.5 * len(chain) + 1.0 * fact_match + 2.0 * sim_score
+
+
+    def select_best_explanation(self, concept_list, known_facts, user_input, embedder):
+        """
+        Generate and evaluate multiple chains. Return the best one.
+        """
+        best_chain = None
+        best_score = -1
+        all_chains = []
+
+        for concept in concept_list:
+            chains = self.explain(concept)
+            for chain in chains:
+                score = self.score_chain(chain, known_facts, user_input, embedder)
+                all_chains.append((chain, score))
+                if score > best_score:
+                    best_score = score
+                    best_chain = chain
+
+        return best_chain, best_score, all_chains
+
+def explain_chain_naturally(chain):
+    """
+    Convert a symbolic reasoning chain into a human-readable explanation.
+    """
+    if not chain:
+        return "No explanation found."
+
+    steps = []
+    for premise, conclusion in chain:
+        step = f"Because {premise.replace('_', ' ')}, it may lead to {conclusion.replace('_', ' ')}."
+        steps.append(step)
+
+    summary = f"Therefore, the observed issue may ultimately be due to {chain[0][0].replace('_', ' ')}."
+    return "\n".join(steps + [summary])
+
+def visualize_reasoning_chain(chain, title="Reasoning Path"):
+    """
+    Visualize a reasoning chain as a directed graph.
+    """
+    if not chain:
+        print("No reasoning chain to visualize.")
+        return
+
+    import networkx as nx
+    G = nx.DiGraph()
+
+    for premise, conclusion in chain:
+        G.add_edge(premise.replace('_', ' '), conclusion.replace('_', ' '))
+
+    pos = nx.spring_layout(G)
+    plt.figure(figsize=(10, 6))
+    nx.draw(G, pos, with_labels=True, node_size=2000, node_color="lightblue", edge_color="gray", font_size=10, font_weight='bold')
+    nx.draw_networkx_edges(G, pos, arrowstyle='->', arrowsize=20)
+    plt.title(title)
+    plt.tight_layout()
+    plt.show()
