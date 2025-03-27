@@ -1,0 +1,5 @@
+low(neurosteroid_levels) => microglial_activation
+microglial_activation => disruption(pnn)
+disruption(pnn) => memory_loss
+exposure(x) => disrupts(pnn)
+causes(disruption(pnn), memory_loss)
