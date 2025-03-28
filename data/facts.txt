@@ -1,6 +1,20 @@
-Microglia respond to both inflammation and hormonal signals.
-Neurosteroids modulate neural plasticity and memory function.
-Estradiol has neuroprotective effects in hippocampal neurons.
-Chronic stress reduces aromatase expression.
-Memory loss is commonly observed in neurodegenerative disease.
-Perineuronal nets regulate synaptic plasticity and learning.
+Microglial activation plays a central role in mediating neuroinflammatory responses.
+Neuroinflammation is linked to memory loss in aging and neurodegenerative disease.
+Perineuronal nets regulate critical period closure and long-term synaptic stability.
+Low levels of estradiol impair hippocampal-dependent memory consolidation.
+Aromatase activity in the hippocampus influences local estrogen synthesis.
+BDNF is essential for synaptic plasticity and long-term potentiation.
+Chronic stress downregulates BDNF expression in the hippocampus.
+Excess cortisol exposure disrupts memory encoding in the prefrontal cortex.
+Sleep deprivation impairs hippocampal function and memory consolidation.
+Default mode network disruptions are observed in Alzheimer’s disease.
+Synaptic pruning is mediated by activated microglia during early development.
+Oxidative stress contributes to neural damage in Alzheimer’s and Parkinson’s disease.
+Social isolation elevates neuroinflammatory markers and impairs cognition.
+Estradiol has neuroprotective effects against excitotoxicity and inflammation.
+White matter decline contributes to reduced cognitive processing speed in aging.
+Cognitive overload impairs executive function and working memory.
+Environmental enrichment promotes neurogenesis and cognitive flexibility.
+Tau pathology disrupts synaptic integrity and correlates with memory decline.
+Vascular dysfunction reduces cerebral perfusion and impairs learning.
+Hippocampal atrophy is strongly associated with episodic memory deficits.

@@ -1,10 +1,58 @@
-memory_loss: decline in the brain's ability to recall or retrieve information, commonly seen in neurodegeneration
-impaired_learning: reduced ability to acquire new knowledge, often due to structural or functional neural changes
-disruption(pnn): breakdown of perineuronal nets, which protect neurons and support plasticity
-microglial_activation: a reactive immune state of microglia, the brain's primary immune cells
-neuroinflammation: inflammation of the brain and spinal cord, often involving activated microglia
-chronic_stress: prolonged psychological stress that dysregulates hormones and impairs cognition
-aromatase_suppression: inhibition of the enzyme that converts androgens into estrogens in the brain
-low(neurosteroid_levels): reduced concentration of hormones like estradiol that regulate brain function
-aging: biological process associated with decline in neural plasticity and hormone production
-academic_decline: measurable reduction in learning performance, attention, or memory retention
+#### 🧠 Memory and Learning
+memory_loss: A decline in the ability to encode, store, or retrieve information, often associated with hippocampal atrophy, synaptic dysfunction, or neurodegenerative processes such as Alzheimer’s disease.
+
+impaired_learning: A deficit in acquiring or consolidating new knowledge or behaviors, linked to disrupted long-term potentiation (LTP), reduced neurogenesis, or executive function deficits.
+
+forgetfulness: Behavioral expression of memory decay or interference, commonly due to impaired hippocampal consolidation or attentional filtering failure.
+
+academic_decline: Observable decrease in cognitive performance, memory retention, or attentional regulation, often influenced by environmental stressors, fatigue, or emotional dysregulation.
+
+hippocampal_atrophy: A reduction in the structural volume of the hippocampus, associated with age-related memory deficits, PTSD, and neurodegenerative disorders.
+
+default_mode_disruption: Dysregulation of the brain’s default mode network, leading to disorganized internal thought, impaired memory encoding, and attentional dysfunction.
+
+executive_dysfunction: Impaired goal-directed behavior and working memory due to prefrontal cortex disruption; observed in ADHD, traumatic brain injury, and depression.
+
+#### 🐝 Neuroimmune and Inflammatory Processes
+microglial_activation: Transition of microglia from surveillant to reactive phenotype, often triggered by stress, injury, or pathogens; involves cytokine release and synaptic pruning.
+
+neuroinflammation: An immune response within the CNS involving microglia, astrocytes, and inflammatory cytokines; contributes to neurodegeneration and cognitive decline.
+
+oxidative_stress: Accumulation of reactive oxygen species (ROS) damaging lipids, proteins, and DNA in neurons; linked to aging, stress, and neurodegeneration.
+
+disruption(pnn): Breakdown or remodeling of perineuronal nets, extracellular matrix structures that stabilize synapses and regulate plasticity; associated with memory instability and neural vulnerability.
+
+synaptic_pruning: Activity-dependent or pathological removal of synapses; developmentally necessary but excessive in conditions like schizophrenia and Alzheimer's disease.
+
+#### 🧪 Neuroendocrine and Hormonal Dynamics
+low(neurosteroid_levels): A reduction in levels of endogenous neuroactive steroids (e.g., estradiol, allopregnanolone), impairing GABAergic signaling, neuroplasticity, and stress regulation.
+
+aromatase_suppression: Downregulation of the aromatase enzyme responsible for converting androgens into estrogens in the brain; impacts hippocampal estradiol availability and neuroprotection.
+
+estradiol_decline: Decrease in brain-derived or circulating estradiol, contributing to mood instability, memory deficits, and neurodegeneration, particularly in menopausal individuals.
+
+glucocorticoid_excess: Elevated levels of cortisol or corticosterone from chronic stress exposure; impairs hippocampal synapses, neurogenesis, and memory encoding.
+
+bdnf_deficiency: A reduction in brain-derived neurotrophic factor (BDNF), critical for synaptic strengthening and memory formation, often caused by stress or genetic variation.
+
+#### 🛍️ Stress and Environmentally Driven Cognitive States
+chronic_stress: Prolonged activation of the HPA axis and glucocorticoid exposure, leading to reduced neurogenesis, dendritic retraction, and impaired memory performance.
+
+sleep_deprivation: Inadequate sleep duration or quality that impairs hippocampal consolidation, disrupts circadian regulation, and lowers glymphatic clearance of metabolic waste.
+
+social_isolation: Environmental deprivation of social contact that contributes to neuroinflammation, depressive phenotypes, and reduced neurogenesis.
+
+environmental_enrichment: Exposure to complex and stimulating environments that promote synaptic growth, neurogenesis, and improved cognitive flexibility.
+
+cognitive_overload: Excessive mental demands that exceed working memory capacity, often leading to performance breakdown, attentional lapses, and anxiety.
+
+#### 👴 Aging and Degenerative States
+aging: A biological process marked by mitochondrial dysfunction, synaptic decline, and hormone shifts; leads to slower processing, reduced flexibility, and memory deterioration.
+
+neurodegeneration: Progressive neuronal loss and dysfunction, as seen in Alzheimer’s, Parkinson’s, and Huntington’s disease; driven by protein misfolding, inflammation, and excitotoxicity.
+
+white_matter_decline: Age-related demyelination and microstructural disconnection between brain regions, leading to slower cognition and poor executive function.
+
+vascular_dysfunction: Reduced cerebral blood flow or breakdown of the blood-brain barrier, contributing to cognitive impairment in vascular dementia and aging brains.
+
+tau_pathology: Accumulation of hyperphosphorylated tau protein leading to neurofibrillary tangles, synaptic disruption, and memory loss in Alzheimer’s disease.

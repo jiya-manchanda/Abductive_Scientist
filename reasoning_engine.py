@@ -1,6 +1,9 @@
+# Symbolic Module: SymbolicReasoner
+# Performs logical reasoning and abductive inference over causal rules
+
 import networkx as nx
-from sentence_transformers import util
 import matplotlib.pyplot as plt
+from sentence_transformers import util
 
 class SymbolicReasoner:
     def __init__(self, rules_path):
@@ -12,9 +15,7 @@ class SymbolicReasoner:
         with open(path, 'r') as f:
             for line in f:
                 if '=>' in line:
-                    parts = line.strip().split('=>')
-                    premise = parts[0].strip()
-                    conclusion = parts[1].strip()
+                    premise, conclusion = map(str.strip, line.strip().split('=>'))
                     rules.append((premise, conclusion))
         return rules
 
@@ -45,38 +46,27 @@ class SymbolicReasoner:
                 if i != j:
                     try:
                         path = nx.shortest_path(self.graph, source=concepts[i], target=concepts[j])
-                        edge_chain = [(path[k], path[k+1]) for k in range(len(path)-1)]
+                        edge_chain = [(path[k], path[k + 1]) for k in range(len(path) - 1)]
                         chains.append(edge_chain)
                     except (nx.NetworkXNoPath, nx.NodeNotFound):
                         continue
         return chains
 
     def score_chain(self, chain, known_facts, user_input, embedder):
-        """
-        Score a reasoning chain using:
-        - length
-        - overlap with known facts
-        - embedding similarity to the original user input
-        """
-        from reasoning_engine import explain_chain_naturally  # prevent circular import
-        explanation_text = explain_chain_naturally(chain)
+        # Import locally to prevent circular import
+        from reasoning_engine import explain_chain_naturally
 
-        # Embedding similarity
+        explanation_text = explain_chain_naturally(chain)
         input_embed = embedder.model.encode(user_input, convert_to_tensor=True)
         chain_embed = embedder.model.encode(explanation_text, convert_to_tensor=True)
         sim_score = float(util.cos_sim(input_embed, chain_embed)[0])
 
-        # Fact match score
         fact_match = sum(1 for p, c in chain for f in known_facts if p in f or c in f)
 
-        # Final weighted score (you can tune weights)
+        # Weighted scoring: adjust weights as needed
         return 0.5 * len(chain) + 1.0 * fact_match + 2.0 * sim_score
 
-
     def select_best_explanation(self, concept_list, known_facts, user_input, embedder):
-        """
-        Generate and evaluate multiple chains. Return the best one.
-        """
         best_chain = None
         best_score = -1
         all_chains = []
@@ -92,39 +82,36 @@ class SymbolicReasoner:
 
         return best_chain, best_score, all_chains
 
+
 def explain_chain_naturally(chain):
-    """
-    Convert a symbolic reasoning chain into a human-readable explanation.
-    """
     if not chain:
         return "No explanation found."
 
-    steps = []
-    for premise, conclusion in chain:
-        step = f"Because {premise.replace('_', ' ')}, it may lead to {conclusion.replace('_', ' ')}."
-        steps.append(step)
-
+    steps = [
+        f"Because {premise.replace('_', ' ')}, it may lead to {conclusion.replace('_', ' ')}."
+        for premise, conclusion in chain
+    ]
     summary = f"Therefore, the observed issue may ultimately be due to {chain[0][0].replace('_', ' ')}."
     return "\n".join(steps + [summary])
 
+
 def visualize_reasoning_chain(chain, title="Reasoning Path"):
-    """
-    Visualize a reasoning chain as a directed graph.
-    """
     if not chain:
         print("No reasoning chain to visualize.")
         return
 
-    import networkx as nx
     G = nx.DiGraph()
-
     for premise, conclusion in chain:
         G.add_edge(premise.replace('_', ' '), conclusion.replace('_', ' '))
 
     pos = nx.spring_layout(G)
     plt.figure(figsize=(10, 6))
-    nx.draw(G, pos, with_labels=True, node_size=2000, node_color="lightblue", edge_color="gray", font_size=10, font_weight='bold')
+    nx.draw(
+        G, pos, with_labels=True, node_size=2000, node_color="lightblue",
+        edge_color="gray", font_size=10, font_weight='bold'
+    )
     nx.draw_networkx_edges(G, pos, arrowstyle='->', arrowsize=20)
     plt.title(title)
     plt.tight_layout()
     plt.show()
+    

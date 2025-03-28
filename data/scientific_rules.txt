@@ -1,12 +1,36 @@
-aging => low(neurosteroid_levels)
-chronic_stress => aromatase_suppression
-aromatase_suppression => low(neurosteroid_levels)
+chronic_stress => glucocorticoid_excess
+glucocorticoid_excess => hippocampal_atrophy
+hippocampal_atrophy => memory_loss
+
+chronic_stress => bdnf_deficiency
+bdnf_deficiency => impaired_learning
+
+aromatase_suppression => estradiol_decline
+estradiol_decline => low(neurosteroid_levels)
 low(neurosteroid_levels) => microglial_activation
-neuroinflammation => microglial_activation
-microglial_activation => disruption(pnn)
+microglial_activation => neuroinflammation
+neuroinflammation => memory_loss
+
+microglial_activation => synaptic_pruning
+synaptic_pruning => disruption(pnn)
 disruption(pnn) => memory_loss
 disruption(pnn) => impaired_learning
-memory_loss => forgetfulness
-impaired_learning => academic_decline
-academic_decline => stress
-stress => chronic_stress
+
+aging => white_matter_decline
+white_matter_decline => executive_dysfunction
+executive_dysfunction => academic_decline
+
+aging => neurodegeneration
+neurodegeneration => tau_pathology
+tau_pathology => memory_loss
+
+default_mode_disruption => impaired_learning
+sleep_deprivation => impaired_learning
+social_isolation => neuroinflammation
+
+oxidative_stress => neurodegeneration
+neurodegeneration => hippocampal_atrophy
+
+vascular_dysfunction => impaired_learning
+cognitive_overload => academic_decline
+environmental_enrichment => improved_learning
