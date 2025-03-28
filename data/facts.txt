@@ -18,3 +18,9 @@ Environmental enrichment promotes neurogenesis and cognitive flexibility.
 Tau pathology disrupts synaptic integrity and correlates with memory decline.
 Vascular dysfunction reduces cerebral perfusion and impairs learning.
 Hippocampal atrophy is strongly associated with episodic memory deficits.
+
+Perineuronal nets (PNNs) significantly restrict synaptic plasticity by inhibiting synapse formation. The digestion of PNNs has been associated with short-term cognitive improvements and reduced long-term memory, offering potential therapeutic
+Evidence is strong that, in addition to fine motor control, there is an important role for the cerebellum in cognition and emotion. We explore the development and role of perineuronal nets and the in vivo and in vitro evidence
+Perineuronal nets (PNNs) are condensed extracellular matrix (ECM) structures found throughout the central nervous system that regulate plasticity. They consist of a heterogeneous mix of ECM components that form lattice
+Perineuronal nets (PNNs) are chondroitin sulphate proteoglycan-containing structures on the neuronal surface that have been implicated in the control of neuroplasticity and memory. Age-related reduction of
+Advanced physiological aging is associated with impaired cognitive performance and the inability to induce long-term potentiation (LTP), an electrophysiological correlate of memory. Here, we demonstrate in the physiologically aged, senescent mouse brain that

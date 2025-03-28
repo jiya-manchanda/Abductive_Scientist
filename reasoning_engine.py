@@ -1,5 +1,4 @@
-# Symbolic Module: SymbolicReasoner
-# Performs logical reasoning and abductive inference over causal rules
+# reasoning_engine.py
 
 import networkx as nx
 import matplotlib.pyplot as plt
@@ -62,8 +61,6 @@ class SymbolicReasoner:
         sim_score = float(util.cos_sim(input_embed, chain_embed)[0])
 
         fact_match = sum(1 for p, c in chain for f in known_facts if p in f or c in f)
-
-        # Weighted scoring: adjust weights as needed
         return 0.5 * len(chain) + 1.0 * fact_match + 2.0 * sim_score
 
     def select_best_explanation(self, concept_list, known_facts, user_input, embedder):
@@ -82,18 +79,15 @@ class SymbolicReasoner:
 
         return best_chain, best_score, all_chains
 
-
 def explain_chain_naturally(chain):
     if not chain:
         return "No explanation found."
-
     steps = [
         f"Because {premise.replace('_', ' ')}, it may lead to {conclusion.replace('_', ' ')}."
         for premise, conclusion in chain
     ]
     summary = f"Therefore, the observed issue may ultimately be due to {chain[0][0].replace('_', ' ')}."
     return "\n".join(steps + [summary])
-
 
 def visualize_reasoning_chain(chain, title="Reasoning Path"):
     if not chain:
@@ -103,7 +97,6 @@ def visualize_reasoning_chain(chain, title="Reasoning Path"):
     G = nx.DiGraph()
     for premise, conclusion in chain:
         G.add_edge(premise.replace('_', ' '), conclusion.replace('_', ' '))
-
     pos = nx.spring_layout(G)
     plt.figure(figsize=(10, 6))
     nx.draw(
@@ -114,4 +107,10 @@ def visualize_reasoning_chain(chain, title="Reasoning Path"):
     plt.title(title)
     plt.tight_layout()
     plt.show()
-    
+
+# For debugging:
+if __name__ == "__main__":
+    reasoner = SymbolicReasoner("data/scientific_rules.txt")
+    sample_explanations = reasoner.explain("memory_loss")
+    for chain in sample_explanations:
+        print(explain_chain_naturally(chain))
