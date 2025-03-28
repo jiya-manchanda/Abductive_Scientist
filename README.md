@@ -1,7 +1,3 @@
-Here’s a clean, informative `README.md` for your GitHub repository, written in Markdown:
-
----
-
 # 🧠 Abductive Neuroscientist
 
 A neurosymbolic system that simulates **abductive reasoning** over neuroscience literature. It integrates neural embeddings, symbolic logic, and scientific rules to explain observations with natural language and visual reasoning chains.
