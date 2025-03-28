@@ -1,7 +1,104 @@
-memory_loss: A decline in the ability to encode, store, or retrieve information, often associated with hippocampal atrophy, synaptic dysfunction, or neurodegenerative processes such as Alzheimer’s disease.
-impaired_learning: A deficit in acquiring or consolidating new knowledge or behaviors, linked to disrupted long-term potentiation (LTP), reduced neurogenesis, or executive function deficits.
-forgetfulness: Behavioral expression of memory decay or interference, commonly due to impaired hippocampal consolidation or attentional filtering failure.
-academic_decline: Observable decrease in cognitive performance, memory retention, or attentional regulation, often influenced by environmental stressors, fatigue, or emotional dysregulation.
-hippocampal_atrophy: A reduction in the structural volume of the hippocampus, associated with age-related memory deficits, PTSD, and neurodegenerative disorders.
-default_mode_disruption: Dysregulation of the brain’s default mode network, leading to disorganized internal thought, impaired memory encoding, and attentional dysfunction.
-executive_dysfunction: Impaired goal-directed behavior and working memory due to prefrontal cortex disruption; observed in ADHD, traumatic brain injury, and depression.
+memory_loss: A decline in the ability to encode, store, or retrieve information. Often linked to hippocampal atrophy, synaptic dysfunction, and neurodegenerative processes (e.g., Alzheimer’s disease), as well as traumatic brain injury and chronic stress.
+impaired_learning: A deficit in acquiring or consolidating new information or behaviors, often due to disrupted long-term potentiation, reduced neurogenesis, or impaired synaptic plasticity.
+forgetfulness: A behavioral manifestation of deteriorating memory where retrieval of stored information becomes inconsistent, seen in normal aging or exacerbated by neurological conditions.
+academic_decline: A measurable decrease in cognitive performance, learning efficiency, and memory retention, often driven by chronic stress, fatigue, or underlying neuropathology.
+hippocampal_atrophy: A reduction in the size and integrity of the hippocampus, commonly observed in aging, Alzheimer’s disease, and after traumatic brain injury, leading to episodic memory deficits.
+default_mode_disruption: Alterations in the activity and connectivity of the brain’s default mode network, impacting internal thought, memory consolidation, and attention.
+executive_dysfunction: Impaired higher-order cognitive processes, including planning, decision-making, and working memory, frequently associated with prefrontal cortex damage.
+synaptic_plasticity: The capacity of synapses to strengthen or weaken over time in response to activity, underpinning learning, memory formation, and adaptive reorganization.
+neuroinflammation: A sustained inflammatory response within the central nervous system mediated by activated glial cells, contributing to neuronal dysfunction and cognitive decline.
+cognitive_flexibility: The ability to adapt cognitive processing strategies to face new and unexpected conditions, critical for problem-solving and creative thinking.
+working_memory_deficit: Reduced capacity to hold and manipulate information over short periods, affecting reasoning and decision-making.
+attentional_impairment: Difficulties in sustaining or selectively focusing attention, often resulting from disruptions in frontoparietal networks.
+neurotransmitter_imbalance: Disruptions in the normal levels of neurotransmitters (e.g., dopamine, serotonin, acetylcholine) that affect mood, cognition, and behavior.
+oxidative_stress: An imbalance between reactive oxygen species production and antioxidant defenses, leading to cellular damage and contributing to neurodegeneration.
+tau_pathology: Abnormal hyperphosphorylation and aggregation of tau protein, resulting in neurofibrillary tangles that disrupt neuronal function.
+microglial_activation: The process by which microglia become reactive in response to injury or disease, initiating inflammatory responses that can damage neural tissue.
+synaptic_pruning: The natural process of eliminating excess synapses during development, which, if dysregulated, can lead to cognitive and developmental disorders.
+neurogenesis_decline: A reduction in the generation of new neurons, particularly in the hippocampus, affecting memory and mood regulation.
+myelin_deterioration: Degeneration of the myelin sheath that insulates axons, slowing neural transmission and impairing cognitive processing.
+amyloid_aggregation: The accumulation of beta-amyloid plaques, a hallmark of Alzheimer’s disease that disrupts synaptic communication.
+dendritic_spine_loss: A decrease in the number or density of dendritic spines, affecting synaptic connectivity and plasticity.
+cerebral_hypoperfusion: Reduced blood flow to the brain, leading to oxygen and nutrient deficits that impair cognitive function.
+excitotoxicity: Neuronal damage or death caused by excessive stimulation by neurotransmitters such as glutamate.
+calcium_dysregulation: Disruptions in calcium signaling within neurons that can trigger cell death and impair synaptic function.
+mitochondrial_dysfunction: Impairment in the energy-producing functions of mitochondria, contributing to neuronal energy deficits and neurodegeneration.
+blood_brain_barrier_disruption: A compromise in the integrity of the blood-brain barrier, allowing harmful substances to enter the brain and trigger inflammation.
+astrocyte_reactivity: The activation of astrocytes in response to injury or disease, which can both support and hinder neuronal recovery.
+glial_scar_formation: The buildup of reactive glial cells at the site of CNS injury, which can inhibit axonal regeneration.
+neural_network_dysregulation: Abnormal connectivity or communication between neurons that disrupts normal brain function.
+cortical_thinning: A reduction in the thickness of the cerebral cortex, often seen in aging and neurodegenerative diseases.
+limbic_system_dysfunction: Impairment in the limbic structures responsible for emotion and memory, affecting behavior and cognition.
+basal_ganglia_disruption: Alterations in the basal ganglia circuits that affect motor control and habit formation.
+cerebellar_atrophy: Loss of cerebellar volume, leading to deficits in motor coordination and aspects of cognitive processing.
+sensorimotor_integration_impairment: Difficulty in coordinating sensory information with motor responses, impacting daily functioning.
+cortical_lateralization: The specialization of functions between the two cerebral hemispheres, affecting language and spatial skills.
+hemispheric_dysfunction: Impaired functioning of one cerebral hemisphere, leading to deficits in specific cognitive domains.
+frontal_lobe_impairment: Deficits in executive functions, impulse control, and social behavior resulting from damage to the frontal lobes.
+temporal_lobe_abnormalities: Structural or functional disruptions in the temporal lobes, affecting auditory processing and memory.
+parietal_lobe_deficits: Impairments in spatial awareness and sensory integration due to parietal cortex dysfunction.
+occipital_lobe_abnormalities: Deficits in visual processing stemming from disruptions in the occipital cortex.
+dopaminergic_dysfunction: Impaired dopamine signaling that affects reward processing, motivation, and motor control.
+serotonergic_dysregulation: Alterations in serotonin levels influencing mood, anxiety, and cognitive flexibility.
+cholinergic_deficit: Reduced acetylcholine activity associated with memory impairment and attention deficits.
+noradrenergic_disruption: Abnormalities in norepinephrine signaling that impact arousal, stress responses, and attention.
+GABAergic_impairment: Deficient GABAergic transmission leading to decreased inhibitory control and potential seizure activity.
+glutamatergic_overactivity: Excess glutamate activity that can lead to excitotoxicity and neuronal damage.
+neuropeptide_modulation: The regulation of synaptic activity by neuropeptides, influencing pain, stress, and reward.
+endocannabinoid_system_disruption: Alterations in endocannabinoid signaling affecting mood, appetite, and pain modulation.
+neuroendocrine_dysregulation: Imbalances in hormones that influence brain function, including stress responses and metabolism.
+hypothalamic_pituitary_axis_dysfunction: Disruptions in the HPA axis that affect cortisol production and stress responses.
+circadian_rhythm_disruption: Abnormalities in the body’s internal clock that impact sleep, hormone regulation, and cognition.
+sleep_architecture_abnormalities: Alterations in the normal stages of sleep, affecting memory consolidation and cognitive recovery.
+REM_sleep_deficiency: Reduced REM sleep, which is crucial for emotional regulation and memory processing.
+non_REM_sleep_deficit: Impairments in deep sleep stages that affect physical restoration and learning.
+memory_consolidation_impairment: Disruptions in the processes that stabilize memories after initial encoding.
+procedural_memory_deficit: Difficulties in learning motor and cognitive skills that are typically acquired implicitly.
+declarative_memory_loss: Impairment in the explicit recall of facts and events.
+working_memory_capacity: The functional limit of the brain’s ability to temporarily hold and manipulate information.
+episodic_memory_impairment: Deficits in recalling specific personal events or experiences.
+semantic_memory_deficit: Impairment in the general knowledge and facts about the world.
+spatial_memory_loss: Difficulties in remembering spatial environments and navigation routes.
+prospective_memory_impairment: Reduced ability to remember to perform planned actions in the future.
+emotional_memory_dysfunction: Altered processing of emotionally charged memories.
+habit_formation_dysfunction: Impairment in the development or modification of habitual behaviors.
+decision_making_impairment: Deficits in evaluating options and making choices, often linked to prefrontal cortex dysfunction.
+risk_assessment_deficit: Impaired ability to evaluate potential dangers or rewards.
+impulse_control_disorder: A failure to resist temptations, resulting in impulsive actions.
+reward_processing_abnormality: Disruptions in the brain’s reward system that affect motivation and pleasure.
+motivation_reduction: A decrease in the drive to initiate or sustain goal-directed behavior.
+anhedonia: The inability to experience pleasure, frequently seen in depression.
+stress_response_dysfunction: Abnormalities in the physiological response to stress.
+HPA_axis_hyperactivity: Excessive activation of the hypothalamic-pituitary-adrenal axis leading to high cortisol levels.
+cortisol_excess: Elevated cortisol concentrations that can damage brain regions such as the hippocampus.
+adrenaline_overdrive: Excessive release of adrenaline affecting cardiovascular and cognitive functions.
+sympathetic_overactivity: Increased sympathetic nervous system activity that may impair relaxation and recovery.
+parasympathetic_dysfunction: Impaired parasympathetic activity, reducing the body’s ability to recover from stress.
+inflammatory_mediators: Molecules such as cytokines that drive inflammatory responses in the brain.
+cytokine_release: The secretion of signaling proteins that modulate immune and inflammatory processes.
+chemokine_activity: The function of chemokines in directing immune cell migration in the CNS.
+neuroimmune_interaction: The complex interplay between the nervous and immune systems.
+epigenetic_modifications: Heritable changes in gene expression that do not involve alterations in DNA sequence.
+DNA_methylation_changes: The addition of methyl groups to DNA that can silence or activate genes.
+histone_modification_dysregulation: Abnormal changes to histone proteins affecting chromatin structure and gene expression.
+microRNA_regulation: The modulation of gene expression by small noncoding RNAs.
+synaptic_transmission: The process of communication between neurons via neurotransmitters.
+action_potential_propagation: The electrical signaling along axons that underlies neural communication.
+ionic_channel_dysfunction: Abnormalities in ion channel operation affecting neuronal excitability.
+receptor_downregulation: A decrease in receptor numbers or sensitivity in response to chronic stimulation.
+signal_transduction_pathways: Complex cascades of molecular events that transmit signals within cells.
+MAPK_pathway_dysfunction: Impaired mitogen-activated protein kinase signaling affecting cell survival and plasticity.
+PI3K_Akt_pathway_impairment: Disruption in a key signaling pathway involved in growth and survival.
+mTOR_signaling_dysregulation: Abnormalities in the mTOR pathway that affect protein synthesis and synaptic plasticity.
+protein_aggregation: The accumulation of misfolded proteins that can disrupt cellular function.
+ubiquitin_proteasome_system_failure: Impaired protein degradation leading to toxic buildup in neurons.
+autophagy_dysfunction: Disruption in the process that clears damaged organelles and proteins.
+lysosomal_storage_disease: Disorders caused by the accumulation of substances in lysosomes.
+prion_disease_mechanisms: Processes by which misfolded prion proteins propagate neurodegeneration.
+neuroplasticity_reduction: A decline in the brain’s ability to reorganize and form new connections.
+synaptic_scaling_deficit: Impaired ability to adjust synaptic strength to maintain stable network activity.
+critical_period_closure: The end of a developmental window during which the brain is highly plastic.
+experience_dependent_plasticity: Neural changes driven by sensory experiences and learning.
+learning_and_memory_mechanisms: The cellular and molecular processes that underlie acquiring and storing information.
+neural_rewiring: Structural reorganization of neural circuits in response to experience or injury.
+connectome_alterations: Changes in the pattern of neural connections across the brain.
